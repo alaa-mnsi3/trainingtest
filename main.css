@@ -1,0 +1,891 @@
+
+*
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+    overflow-x: hidden;
+}
+/* background */
+.container-background
+{
+    overflow:hidden ;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+}
+.container-background div
+{
+    background:rgba(56 ,54 ,72 ,.5);
+    width: 100%;
+    height: 100%;
+}
+/*header*/
+header
+{
+    width: 100vw;
+    overflow: hidden;
+    padding: 1rem;
+    position: absolute;
+    z-index: 5;
+    top: 0%;
+    left: 0%;
+    background:rgba(56 ,54 ,72 ,.2);
+    box-shadow: 1px 1px 1px 1px rgba(56 ,54 ,72 ,.4);
+}
+header nav
+{
+    width: 100%;
+    margin: 0 16%;
+}
+header nav ul
+{
+    display: flex;
+}
+header nav ul li
+{
+    margin-right:1.6rem ;
+    list-style: none;
+}
+header nav ul li a,
+.mob-bar nav ul li a
+{
+
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    transition: all 1s ease;
+    transform: scale(1);
+    font-size: 1rem;
+}
+header nav ul li:nth-of-type(2),
+header nav ul li:nth-of-type(3),
+header nav ul li:nth-of-type(4),
+header nav ul li:nth-of-type(5),
+header nav ul li:nth-of-type(6)
+{
+    margin-top: .3rem;
+}
+@media (min-width: 100px)and (max-width: 1100px)
+{
+    header nav ul li:nth-of-type(2),
+    header nav ul li:nth-of-type(3),
+    header nav ul li:nth-of-type(4),
+    header nav ul li:nth-of-type(5),
+    header nav ul li:nth-of-type(6),
+    header nav ul li:last-of-type
+    {
+        display: none;
+    }
+    .mob-nav-bar
+    {
+        top:50%;
+        right: 1%;
+        z-index: 100;
+        position: absolute;
+        display: inline-block;
+        width: 20%;
+        cursor: pointer;
+    }
+    .mob-nav-bar span
+    {
+        display: block;
+        width: 20%;
+        height: 5px;
+        background-color: white;
+    }
+    .mob-nav-bar span::before
+    {
+        display: block;
+        position: absolute;
+        margin-top: .5rem;
+        top: 20%;
+        content: '';
+        width: 20%;
+        height: 5px;
+        background-color: white;
+    }
+    .mob-nav-bar span::after
+    {
+        display: block;
+        position: absolute;
+        content: '';
+        margin-bottom: .5rem;
+        bottom: 2%;
+        width: 20%;
+        height: 5px;
+        background-color: white;
+    }
+}
+header nav ul li a:hover
+{
+    color: #EF6529;
+    transform: scale(.8);
+}
+header nav ul li:first-of-type a:hover
+{
+    transform: scale(1);
+    color: white;
+}
+header nav ul li:nth-of-type(2) a
+{
+    color: #EF6529;
+}
+header nav ul li:last-of-type a
+{
+    background-color: orangered;
+    padding: 0.4rem 1rem;
+    transition: all 1s ease;
+}
+header nav ul li:last-of-type a:hover
+{
+    color: orangered;
+    background-color: white;
+}
+header nav ul li:first-of-type
+{
+    margin-right: 4rem;
+    margin-top: .2rem;
+}
+header nav ul li:first-of-type a
+{
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
+header nav ul li:first-of-type a span
+{
+    color: orangered;
+}
+@media (min-width: 100px)and (max-width: 400px)
+{
+    header nav ul li:first-of-type a
+    {
+        font-size: .8rem;
+        font-weight: bolder;
+    }
+}
+@media (min-width: 400px)and (max-width: 1100px)
+{
+    header nav ul li:first-of-type a
+    {
+        font-size: 1.2rem;
+        font-weight: bolder;
+    }
+}
+/*header*/
+.container-video
+{
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+.video
+{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+}
+
+@media (min-aspect-ratio: 16/9) {
+    #gym_video
+    {
+        max-width: 100%;
+        height: auto;
+    }
+}
+@media (max-aspect-ratio: 16/9) {
+    #gym_video
+    {
+        width: auto;
+        height: 100%;
+    }
+}
+@media (min-width: 300px)and (max-width: 828px)
+{
+    #gym_video
+    {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+.text-background
+{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 2;
+    font-size: 100px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    line-height: 3rem;
+}
+.text-background p:first-of-type
+{
+
+    color:white;
+    font-size: .8rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+}
+.text-background p:last-of-type
+{
+
+    color:white;
+    font-size: 3rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+}
+.text-background p:last-of-type span
+{
+    color: orangered;
+}
+.text-background a,
+.container-advice .advice .paragraph-advice p:last-of-type,
+.container-classes .classes .classes-slides .classes-training-info section div p:last-of-type
+{
+    display: inline-block;
+    background-color: orangered;
+    color:white;
+    font-size: .8rem;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 0 1rem;
+    transition: all 1s ease;
+    cursor: pointer;
+}
+.text-background a:hover,
+.container-advice .advice .paragraph-advice p:last-of-type:hover,
+.container-classes .classes .classes-slides .classes-training-info section div p:last-of-type:hover
+{
+    background-color: red;
+}
+
+/* mob */
+
+.mob-bar
+{
+    background-color: orangered;
+    width: 40%;
+    height: 100%;
+    display: none;
+    position: fixed;
+    z-index: 101;
+    text-align: center;
+}
+.mob-bar nav ul li
+{
+    vertical-align: middle;
+}
+.mob-bar nav ul li a
+{
+    margin-top: 5rem;
+    display: block;
+    color: white;
+    transition: all 1s ease;
+}
+.mob-bar nav ul li a:hover
+{
+    color: #EF6529;
+}
+/*---------------------------------------*/
+/*---------------------------------------*/
+/*---------------------------------------*/
+.container-program,
+.container-classes,
+.container-Trainer
+{
+    margin-top: 15rem;
+    text-align: center;
+    width: 100vw;
+}
+.container-program .program
+,.container-classes .classes
+    ,.container-Trainer .Trainer
+{
+    margin: 0 auto;
+    text-align: center;
+}
+.container-program .program-info,
+.container-classes .classes-info
+,.container-Trainer .Trainer .Trainer-info
+{
+    display: inline-block;
+    width: 29%;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 3rem;
+}
+.container-program .program-info p:first-of-type,
+.container-classes .classes-info p:first-of-type,
+.container-Trainer .Trainer .Trainer-info p:first-of-type
+{
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: rgba(0,0,0,.8);
+    margin-bottom: 1rem;
+}
+.container-program .program-info p:first-of-type span,
+.container-classes .classes-info p:first-of-type span,
+.container-Trainer .Trainer .Trainer-info p:first-of-type span
+{
+    color: orangered;
+}
+.container-program .program-info p:last-of-type,
+.container-classes .classes-info p:last-of-type,
+.container-Trainer .Trainer .Trainer-info p:last-of-type
+{
+    font-size: 1rem;
+    color: rgba(0,0,0,.5);
+    margin-top: 1rem;
+}
+.container-program .program-info-1
+{
+    display: inline-block;
+    flex-direction: row;
+    width: 35%;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 1rem;
+}
+.container-program .program-info-1 .img
+{
+    float: left;
+    width: 10%;
+    margin-right:4rem;
+}
+.container-program .program-info-1 .paragraph
+{
+    font-family: 'Montserrat', sans-serif;
+    width: 75%;
+    object-position:top;
+    float: right;
+    margin-bottom: 1rem;
+}
+.container-program .program-info-1 .paragraph p:first-of-type
+{
+    text-align: left;
+    font-size: 1rem;
+    color: rgba(0,0,0,.7);
+    margin-bottom: 1rem;
+}
+.container-program .program-info-1 .paragraph p:last-of-type
+{
+    line-height: 1.4rem;
+    text-align: left;
+    font-size: 1rem;
+    color: rgba(0,0,0,.5);
+}
+.container-program .program-info-1>p
+{
+    text-align: left;
+    cursor: pointer;
+    color: orangered;
+    font-size: .8rem;
+}
+.clear
+{
+    clear: both;
+}
+@media (min-width: 100px)and (max-width: 1180px)
+{
+    .container-program .program-info-1
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+    .container-program .program-info-1 .paragraph
+    {
+        width: 50%;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+    .container-program .program-info-1>p
+    {
+        width: 50%;
+        text-align: center;
+    }
+    .container-program .program-info-1 .paragraph p:first-of-type
+    {
+        text-align: center;
+    }
+    .container-program .program-info-1 .paragraph p:last-of-type
+    {
+        text-align: center;
+    }
+    .container-program .program-info-1 .img
+    {
+        display: block;
+        text-align: center;
+        width: 100%;
+        margin-right:0;
+    }
+
+}
+
+
+.container-advice
+{
+    width:100vw;
+    height:70vh;
+    margin-top: 13rem;
+    margin-bottom: 5rem;
+}
+.container-advice .advice
+{
+    padding: 1rem;
+    width: 100%;
+    height: 100%;
+    background: url("images/cta-bg.jpg") center center;
+    background-size: cover;
+    text-align: justify;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.container-advice .advice .paragraph-advice
+{
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container-advice .advice .paragraph-advice p:first-of-type
+{
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+.container-advice .advice .paragraph-advice p:first-of-type .red
+{
+    display: inline-block;
+    color: orangered;
+}
+.container-advice .advice .paragraph-advice p:first-of-type .white
+{
+    display: inline-block;
+    color: whitesmoke;
+}
+.container-advice .advice .paragraph-advice p:last-of-type
+{
+    margin-top: 1rem;
+    padding: 1rem 1rem;
+}
+
+.container-advice .advice .paragraph-advice p:nth-of-type(2)
+{
+    text-align: center;
+    line-height: 1.5rem;
+    color: whitesmoke;
+    width: 70%;
+}
+::selection
+{
+    background: indianred;
+}
+.container-classes
+{
+    width: 100vw;
+}
+
+.container-classes .classes .classes-slides
+{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+justify-content: center;
+    text-align: justify;
+}
+.container-classes .classes .classes-slides .classes-training
+{
+    width: 23%;
+margin-right: 3rem;
+}
+.container-classes .classes .classes-slides .classes-training-info
+{
+    width: 40%;
+margin-left: 1rem;
+}
+.container-classes .classes .classes-slides .classes-training div
+{
+    background: white;
+    box-shadow: 1px 1px 10px 5px rgba(200,200,200,.2);
+    border: 1px solid white;
+    border-radius: 3px;
+    padding:1.5rem 2rem;
+    font-size: 1.3rem;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    text-align: justify;
+    align-items: center;
+    cursor:pointer;
+    color: rgba(0,0,0,0.8);
+}
+.container-classes .classes .classes-slides .classes-training div:last-of-type
+{
+    background: orangered;
+    color: white;
+    transition: all 1s ease;
+}
+.container-classes .classes .classes-slides .classes-training div span
+{
+    font-size: 1rem;
+    word-spacing: 0rem;
+    white-space: nowrap;
+}
+.container-classes .classes .classes-slides .classes-training div:first-of-type
+{
+    color: #ec370f;
+}
+.container-classes .classes .classes-slides .classes-training div img
+{
+ margin-right: 1rem;
+}
+.container-classes .classes .classes-slides .classes-training div:last-of-type p
+{
+    text-transform: capitalize;
+    white-space: nowrap;
+}
+.container-classes .classes .classes-slides .classes-training div:last-of-type:hover
+{
+    background: rgba(255, 69, 0, 0.7);
+}
+.container-classes .classes .classes-slides .classes-training-info section
+{
+    width: 100%;
+    line-height: 2rem;
+    font-family: 'Montserrat', sans-serif;
+}
+.container-classes .classes .classes-slides .classes-training-info section:nth-of-type(2)
+,.container-classes .classes .classes-slides .classes-training-info section:nth-of-type(3)
+,.container-classes .classes .classes-slides .classes-training-info section:last-of-type
+{
+    display: none;
+}
+.container-classes .classes .classes-slides .classes-training-info section img
+{
+    width: 100%;
+}
+.container-classes .classes .classes-slides .classes-training-info section div p:last-of-type
+{
+    padding:.6rem;
+    margin-top: .8rem;
+}
+.container-classes .classes .classes-slides .classes-training-info section div h1
+{
+    color:rgba(0,0,0,.8);
+}
+@media (min-width: 100px)and (max-width: 1050px)
+{
+    .container-classes .classes .classes-slides
+    {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: justify;
+        align-items: center;
+    }
+    .container-classes .classes .classes-slides .classes-training
+    {
+        text-align: center;
+        width: 70%;
+        margin-right: 0;
+    }
+    .container-classes .classes .classes-slides .classes-training-info
+    {
+        text-align: center;
+        width: 70%;
+        margin-left: 0;
+    }
+    .container-classes .classes .classes-slides .classes-training div img
+    {
+      margin-right: 0;
+    }
+}
+/*---------------------------*/
+/*-----------------------------*/
+.container-Trainer
+{
+    margin-bottom: 5rem;
+}
+
+.container-Trainer .Trainer .trainer-ins
+{
+    width:100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: justify;
+    align-items: center;
+}
+.container-Trainer .Trainer .trainer-ins .container-trainer-ex
+{
+
+    box-shadow: 1px 1px 10px 10px whitesmoke;
+    margin-left: 1.4rem;
+    background: white;
+    width: 28%;
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: justify;
+    align-items: center;
+    border-radius: 8px;
+}
+.container-Trainer .Trainer .trainer-ins .container-trainer-ex .trainer-ex
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: justify;
+    align-items: center;
+  width: 80%;
+    font-family: 'Montserrat', sans-serif;
+}
+.container-Trainer .Trainer .trainer-ins .container-trainer-ex .trainer-ex img
+{
+    width: 100%;
+    box-shadow: 1px 1px 10px 10px whitesmoke;
+}
+.container-Trainer .Trainer .trainer-ins .container-trainer-ex .trainer-ex section
+{
+    margin-top: 1.2rem;
+}
+.container-Trainer .Trainer .trainer-ins .container-trainer-ex .trainer-ex section p:first-of-type
+{
+    font-size: .8rem;
+    color: #EF6529;
+    margin-top: .5rem;
+    margin-bottom: .7rem;
+}
+.container-Trainer .Trainer .trainer-ins .container-trainer-ex .trainer-ex section p:nth-of-type(2)
+{
+    font-size: 1.3rem;
+    color:rgba(0,0,0,.9);
+    margin-bottom: 1rem;
+    text-align: left;
+}
+.container-Trainer .Trainer .trainer-ins .container-trainer-ex .trainer-ex section p:last-of-type
+{
+    font-size: .8rem;
+    color:rgba(0,0,0,.7);
+    line-height: 1.5rem;
+    margin-top: .5rem;
+    margin-bottom: 1rem;
+    text-align: left;
+}
+.container-Trainer .Trainer .trainer-ins .container-trainer-ex .trainer-ex section div
+{
+    text-align: center;
+    margin-top: 1rem;
+}
+.container-Trainer .Trainer .trainer-ins .container-trainer-ex .trainer-ex section div i
+{
+    margin-left: .8rem;
+    cursor: pointer;
+    transform: scale(1);
+    transition: all 400ms linear;
+}
+.container-Trainer .Trainer .trainer-ins .container-trainer-ex .trainer-ex section div i:hover
+{
+ color: #EF6529;
+    transform: scale(1.3);
+}
+@media (min-width: 100px)and (max-width: 1050px)
+{
+    .container-Trainer .Trainer .trainer-ins
+    {
+        width:100vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: justify;
+        align-items: center;
+    }
+    .container-Trainer .Trainer .trainer-ins .container-trainer-ex
+    {
+margin-bottom: 2rem;
+        width: 50%;
+
+    }
+}
+/*-----------------------------------*/
+/*-----------------------------------*/
+/*-----------------------------------*/
+/*-----------------------------------*/
+.container-iframe-form
+{
+    width:100vw;
+    height: 80vh;
+    margin-top: 20rem;
+    font-family: 'Montserrat', sans-serif;
+}
+.container-iframe-form section
+{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    text-align: left;
+    height: 100%;
+}
+.container-iframe-form section .iframe
+{
+    width: 50%;
+    margin: 0;
+    height: 100%;
+}
+.container-iframe-form section .iframe iframe
+{
+    width: 100%;
+    margin: 0;
+    height: 100%;
+}
+.container-iframe-form section .form
+{
+width: 50%;
+    background: url("images/slide-01.jpg");
+    background-size: cover;
+    padding: 3rem;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    display: flex;
+    height: 100%;
+}
+.container-iframe-form section .form form
+{
+    width: 80%;
+    border-radius: 5px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: flex-start;
+    text-align: left;
+    padding: 2rem;
+}
+.container-iframe-form section .form form input {
+    border: 1px solid rgba(0,0,0,.1);
+    margin-bottom: 2rem;
+    padding: .5rem;
+}
+.container-iframe-form section .form form>input
+{
+    width: 90%;
+}
+.container-iframe-form section .form form textarea
+{
+    padding: .5rem;
+    border: 1px solid rgba(0,0,0,.1);
+    margin-bottom: 2rem;
+    width: 100%;
+}
+.container-iframe-form section .form form .btn-submit
+{
+    margin-bottom: 0rem;
+    background-color: #EF6529 !important;
+    color: white;
+    text-align: center;
+    width: 40%;
+}
+
+
+
+
+@media (min-width: 100px)and (max-width: 400px) {
+    .container-iframe-form section .form form {
+        width: 90%;
+    }
+    .container-iframe-form section .form form div input {
+        width: 90%;
+    }
+    .container-iframe-form section
+    {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .container-iframe-form section .iframe
+    {
+        width: 100%;
+        margin: 2rem;
+        height: 50vh;
+    }
+    .container-iframe-form section .form
+    {
+        width: 100%;
+    }
+}
+@media (min-width: 400px)and (max-width: 950px)
+{
+    .container-iframe-form section
+    {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .container-iframe-form section .iframe
+    {
+        width: 100%;
+        margin: 2rem;
+        height: 50vh;
+    }
+    .container-iframe-form section .form
+    {
+        width: 100%;
+    }
+}
+/*------------------*/
+footer
+{
+    background-color: rgba(0,0,0,0.5);
+    text-align: center;
+    padding: 1rem;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+footer p span
+{
+    font-size: 1rem;
+    font-weight: bold;
+    color: #EF6529;
+}
+@media (min-width: 100px)and (max-width: 950px)
+{
+    footer
+    {
+       margin-top: 13rem;
+    }
+}
